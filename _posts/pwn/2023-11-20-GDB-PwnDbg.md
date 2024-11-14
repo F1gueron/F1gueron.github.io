@@ -2,7 +2,7 @@
 layout: page
 title: "Introduction to GDB PwnDbg"
 date: 2023-11-20 12:00:00 -0000
-categories: [tools]
+categories: [pwn]
 tags: [gdb, pwn]
 permalink: /pwn/gdb-pwndbg/
 ---
