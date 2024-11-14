@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "HeadLess"
 date: 2024-4-13 18:58:00 +0100
 categories: [writeup, easy]
