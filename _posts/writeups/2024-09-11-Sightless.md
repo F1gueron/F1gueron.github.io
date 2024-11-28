@@ -38,7 +38,7 @@ Let’s perform an NMap scan to identify open ports and services.
 
 **NMap scan result of sightless.htb:**
 <p>
-  <img src="assets/img/sightless/image-12.webp" 
+  <img src="assets/img/writeupImgs/sightless/image-12.webp" 
   alt="Descripción"/>
 </p>
 
@@ -49,7 +49,7 @@ Focusing on port `80` reveals an HTTP service hosting a web application. Further
 The homepage and services page of the target provide minimal information, but the SQLPad service proves crucial.
 
 <p>
-  <img src="assets/img/sightless/Sightless.htb-Services-Page.webp" 
+  <img src="assets/img/writeupImgs/sightless/Sightless.htb-Services-Page.webp" 
   alt="Descripción"/>
 </p>
 
@@ -80,14 +80,14 @@ Perform extensive scans and use tools like **BurpSuite** to analyze the SQLPad s
    - Test and establish the connection.
 
 <p>
-  <img src="assets/img/sightless/Establishing-New-Database-Connection.webp" 
+  <img src="assets/img/writeupImgs/sightless/Establishing-New-Database-Connection.webp" 
   alt="Descripción"/>
 </p>
 
 Now we need to create the following payload to establish a connection with the database:
 
 <p>
-  <img src="assets/img/sightless/Screenshot_13-9-2024_2372_.webp" 
+  <img src="assets/img/writeupImgs/sightless/Screenshot_13-9-2024_2372_.webp" 
   alt="Descripción"/>
 </p>
 
@@ -104,7 +104,7 @@ ssh michael@<target_ip>
 cat /home/michael/user.txt
 ```
 <p>
-  <img src="assets/img/sightless/image-14.webp" 
+  <img src="assets/img/writeupImgs/sightless/image-14.webp" 
   alt="Descripción"/>
 </p>
 
@@ -127,7 +127,7 @@ ssh -i id_rsa root@<target_ip>
 cat /root/root.txt
 ```
 <p>
-  <img src="assets/img/sightless/image-13-edited.webp" 
+  <img src="assets/img/writeupImgs/sightless/image-13-edited.webp" 
   alt="Descripción"/>
 </p>
 
