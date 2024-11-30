@@ -19,9 +19,8 @@ tags: [machine, web-exfiltration]
 ## Table of Contents
 1. [Service Enumeration](#1-service-enumeration)
 2. [Web Recon](#2-web-recon)
-3. [Exploiting CVE-2023-30253](#3-exploiting-cve-2023-30253)
-4. [Lateral Movement](#4-lateral-movement)
-5. [Privilege Escalation](#5-privilege-escalation)
+3. [Lateral Movement](#3-lateral-movement)
+4. [Privilege Escalation](#4-privilege-escalation)
 
 ## 1. Service Enumeration
 
