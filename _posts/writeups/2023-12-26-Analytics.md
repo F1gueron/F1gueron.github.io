@@ -18,14 +18,9 @@ tags: [machine, CVE-2023-38646, CVE-2023-32629]
 ## Table of Contents
 
 1. [Service Enumeration](#1-recon)
-<<<<<<< HEAD
 2. [Web Enumeration](#2-web-enumeration)
 3. [Lateral Movement](#3-lateral-movement)
 4. [Privilege Escalation](#4-privilege-escalation)
-=======
-2. [Lateral Movement](#2-lateral-movement)
-3. [Privilege Escalation](#3-privilege-escalation)
->>>>>>> 96c009b44ab6154340dcf145a4f2e9cc86fa6f56
 
 ## 1. Recon
 
