@@ -54,11 +54,8 @@ Nmap done: 1 IP address (1 host up) scanned in 10.58 seconds
 
 The NMap scan reveals two open ports: `22` and `80`. The `80` port hosts an HTTP service, while the `22` port hosts an SSH service. The HTTP service redirects to `http://analytical.htb/`.
 
-<<<<<<< HEAD
 ## 2. Web Enumeration
 
-=======
->>>>>>> 96c009b44ab6154340dcf145a4f2e9cc86fa6f56
 We visit `http://analytical.htb/` to explore the web application further, and we land here:
 
 <p>
