@@ -17,9 +17,9 @@
   icon: 'fab fa-linkedin'   # icons powered by <https://fontawesome.com/>
   url:  'https://www.linkedin.com/in/jorge-figueras-m%C3%A1rquez-139387260/'                  # Fill with your Linkedin homepage
 #
-# - type: stack-overflow
-#   icon: 'fab fa-stack-overflow'
-#   url:  ''                  # Fill with your stackoverflow homepage
+- type: htb
+  icon: 'fa-solid fa-box'
+  url:  'https://app.hackthebox.com/profile/1221530'                  # Fill with your stackoverflow homepage
 #
 # - type: bluesky
 #   icon: 'fa-brands fa-bluesky'
